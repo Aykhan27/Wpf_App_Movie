@@ -1,0 +1,74 @@
+﻿<UserControl x:Class="WpfAppFilm.Views.HomeView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:WpfAppFilm.Views"
+             x:Name="control"
+             mc:Ignorable="d" 
+             d:DesignHeight="450" d:DesignWidth="700" Background="White" FontSize="20">
+    <Grid Margin="10,10,10,10">
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="30"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <Grid Grid.Row="0">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="130"/>
+            </Grid.ColumnDefinitions>
+            <TextBox Text="{Binding Title}" Margin="0,0,5,0" TextAlignment="Left"/>
+            <Button Command="{Binding SearchCommand}" Grid.Column="1" Margin="5,0,0,0">Search</Button>
+        </Grid>
+        <Grid Grid.Row="1">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="400"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+            <ListBox ItemsSource="{Binding Movies}" Grid.Column="0" Margin="0,10,5,0" FontSize="17" HorizontalContentAlignment="Stretch">
+                <ListBox.ItemTemplate>
+                    <DataTemplate>
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="*"/>
+                                <ColumnDefinition Width="50"/>
+                            </Grid.ColumnDefinitions>
+                            <StackPanel Grid.Column="0">
+                                <TextBlock Margin="2,2,2,2" Text="{Binding Title}"/>
+                                <TextBlock Margin="2,2,2,2" Text="{Binding Year}"/>
+                            </StackPanel>
+                            <Button 
+                                Command="{Binding DataContext.ViewCommand,ElementName=control}"
+                                CommandParameter="{Binding}"
+                                Grid.Column="1" Margin="5,5,5,5">👁</Button>
+                        </Grid>
+                    </DataTemplate>
+                </ListBox.ItemTemplate>
+            </ListBox>
+            <Grid Grid.Column="1" Margin="5,10,0,0">
+                   <Grid.RowDefinitions>
+                       <RowDefinition Height="200"/>
+                       <RowDefinition/>
+                   </Grid.RowDefinitions>
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="135"/>
+                        <ColumnDefinition/>
+                    </Grid.ColumnDefinitions>
+                    <Image Source="{Binding imageSource}" Grid.Column="0" >
+
+                    </Image>
+                    <StackPanel Grid.Column="1">
+                        <TextBlock TextWrapping="Wrap" Text="{Binding SearchMovie.Title, StringFormat=Name: {0}}"/>
+                        <TextBlock Text=""/>
+                        <TextBlock Text="{Binding SearchMovie.Year , StringFormat=Year: {0}}"/>
+                    </StackPanel>
+                </Grid>
+                <Grid Grid.Row="1">
+                    <TextBlock Text="{Binding SearchMovie.Type , StringFormat=Type: {0}}"/>
+                </Grid>
+            </Grid>
+        </Grid>
+    </Grid>
+</UserControl>

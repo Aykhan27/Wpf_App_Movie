@@ -1,0 +1,15 @@
+{
+  "version": 2,
+  "dgSpecHash": "DSj6zhOeXqZszuBlODYDGA22fDSCHzPO5ri3RxUKTCwa1NRSFyoP8SStHM+4RugzkeQxeY5TBqj8wIJfvDaBeQ==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\Ruhlan\\source\\repos\\WpfAppFilm\\WpfAppFilm\\WpfAppFilm.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Ruhlan\\.nuget\\packages\\microsoft.netcore.platforms\\1.0.1\\microsoft.netcore.platforms.1.0.1.nupkg.sha512",
+    "C:\\Users\\Ruhlan\\.nuget\\packages\\microsoft.netcore.targets\\1.0.1\\microsoft.netcore.targets.1.0.1.nupkg.sha512",
+    "C:\\Users\\Ruhlan\\.nuget\\packages\\mvvmlightlibsstd10\\5.4.1.1\\mvvmlightlibsstd10.5.4.1.1.nupkg.sha512",
+    "C:\\Users\\Ruhlan\\.nuget\\packages\\simpleinjector\\4.9.2\\simpleinjector.4.9.2.nupkg.sha512",
+    "C:\\Users\\Ruhlan\\.nuget\\packages\\system.componentmodel\\4.0.1\\system.componentmodel.4.0.1.nupkg.sha512",
+    "C:\\Users\\Ruhlan\\.nuget\\packages\\system.runtime\\4.1.0\\system.runtime.4.1.0.nupkg.sha512"
+  ],
+  "logs": []
+}
